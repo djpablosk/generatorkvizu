@@ -6,5 +6,9 @@ ENGINE.begin();
 Thread.Sleep(500);
 
 questions.loadQuestion1();
-Console.W
+
+Console.WriteLine("Napis svoju odpoved cislom:");
+Console.ReadLine();
+questions.LoadAnswer1();
+
 

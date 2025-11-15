@@ -10,18 +10,18 @@ namespace generatorkvizu
     {
         private const string way = @"C:\Users\smrzo\Documents\projekty VisualStudio\kviz\1.txt";
 
-        public  void  loadQuestion1()
-            {
-             string question1 = File.ReadAllLines(way)[0];
+        public bool loadQuestion1()
+        {
+            string question1 = File.ReadAllText(way);
             Console.WriteLine(question1);
-
-            }
+            return true;
+        }  
         public void LoadAnswer1()
         {
-            string answer1 = File.ReadAllLines(way)[6];
+            string answer1 = "3";
             Console.WriteLine(answer1);
         }
-
+       
         
     }
 }
