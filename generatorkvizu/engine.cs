@@ -14,8 +14,15 @@ namespace generatorkvizu
             Thread.Sleep(500);
             Console.WriteLine("Pre spustenie kvizu stlac ENTER");
             Console.ReadLine();
-            Console.ReadKey();
             Console.Clear();
         }
+        public void end()
+        {
+            Console.Clear();
+            Console.WriteLine("Kviz skonceny, dakujem za ucast");
+            Thread.Sleep(500);
+            Console.WriteLine("Vytvoril Patrik Smržo");
+        }
+
     }
 }
