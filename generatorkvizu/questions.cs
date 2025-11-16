@@ -11,16 +11,26 @@ namespace generatorkvizu
         private const string way1 = @"C:\Users\smrzo\Documents\projekty VisualStudio\kviz\1.txt";
         private const string way2 = @"C:\Users\smrzo\Documents\projekty VisualStudio\kviz\2.txt";
 
-        public bool loadQuestion1()
+        public void loadQuestion1()
         {
-            string question1 = File.ReadAllText(way1);
-            Console.WriteLine(question1);
-            return true;
+            string[] lines = File.ReadAllLines(way1);
+
+            for (int i =0; i < 6; i++)
+            {
+               if (i < lines.Length)
+                {
+                    Console.WriteLine(lines[i]);
+                }
+               else
+                {
+                    break;
+                }
+            }
         }  
         public void LoadAnswer1()
         {
-            string answer1 = "3";
-            Console.WriteLine($"Spravna odpoved je: {answer1}");
+            string answerLine = File.ReadAllText(way2);
+            
         }
        
         public bool loadQuestion2()
