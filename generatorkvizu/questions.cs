@@ -29,21 +29,32 @@ namespace generatorkvizu
         }  
         public void LoadAnswer1()
         {
-            string answerLine = File.ReadAllText(way2);
-            
+            string answerLine = File.ReadAllText(way1).LastOrDefault().ToString();
+            Console.WriteLine(answerLine);
         }
        
-        public bool loadQuestion2()
+        public void loadQuestion2()
         {
-            string question2 = File.ReadAllText(way2);
-            Console.WriteLine(question2);
-            return true;
+            string[] question2 = File.ReadAllLines(way2);
+            for (int i = 0; i < 6; i++)
+            {
+                if (i < question2.Length)
+                {
+                    Console.WriteLine(question2[i]);
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
         public void LoadAnswer2()
         {
-            string answer2 = @"Fuha mas to zle spravna odpoved je 'E'
-A to je Fernando Alonso";
-            Console.WriteLine($"Spravna odpoved je: {answer2}");
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Black;
+            string answerLine2 = File.ReadAllLines(way2).LastOrDefault().ToString();
+            Console.WriteLine(answerLine2);
         }
     }
 }

@@ -15,11 +15,17 @@ namespace generatorkvizu
             Console.WriteLine("Pre spustenie kvizu stlac ENTER");
             Console.ReadLine();
             Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
         }
         public void end()
         {
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
-            Console.WriteLine("Kviz skonceny, dakujem za ucast");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.WriteLine("Kviz skonceny, dakujem za pouzivanie");
             Thread.Sleep(500);
             Console.WriteLine("Vytvoril Patrik Smržo");
         }
